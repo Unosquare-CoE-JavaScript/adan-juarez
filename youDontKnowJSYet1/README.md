@@ -1,11 +1,18 @@
 # You don´t know JS yet: Get Started
 
-## Chapter 1: What is JS?
+>  ## Chapter 1: What is JS?
 
-```javascript
+"use strict" in the first line of the file .js extension to avoid some compilations errors.
 
+JS can works with functional and OOP paradigm together but today is more frequently the use of functional
+programming. 
 
-```
+JS is backward compatibility which means make any change in a program cannot cause conflicts with other JS versions.
+Also you can make use of transformations such as BABEL.
+
+JS is parsing language which means it is parsed before it is executed after theres no errors syntax before converts into a 
+binary compile program.
+
 >  ## Chapter 2: Surveying JS
 
 - Value: Is the most fundamental unit of information in a program. 
@@ -908,16 +915,99 @@ this-aware function invoked three different ways, gives different answers each t
 In this way you can use it to re-use a single function with data from different objects because its dynamice context.
 
 ### *** Prototypes ***
+Prototype is a characteristic of an object, specifically resolution of a property access.
+Prototype is a linage between two objects. The prototype linkage occures when an object is created; it´s linked to another object that already exists.
 
+Prototype chain: A series of objects linked together via prototypes.
+
+```javascript
+Object.prototype object 
+
+//e.g
+var homework = {
+    topic: "JS"
+}
+```
+This object has a default prototype linkage that connects to the Object.prototype object.
 
 ##### *** Object Linkage ***
 
-> ## Chapter 4: The Bigger Picture
-###### **** Cohersion ****
-
-> ## Chapter 5: 
+Define an object prototype linkage. We can use * Object.create() * utility.
+E.g.
 
 ```javascript
+var homework = {
+    topic: "JS"
+}
 
+var hw = Object.create(homework)
+
+hw.topic // "JS"
 
 ```
+The prototype chain is following the next order of execution: 
+1. hw
+2. homework --> topic: "JS"
+3. Object.prototype() --> toString()
+
+Consider the previous example: 
+
+```javascript
+homework.topic //JS
+
+otherHW.topic // JS is delegated here
+
+otherHW.topic = "Math"
+otherHW.topci // Math
+
+//If we call homework.topic again JS is called as Math is a non-delegated value for homework
+homework.topic //JS
+```
+
+The execution of this is as follows:
+
+1. otherHW --> topic: "JS" is shadowing the property of the same name, that´s why we can assign "Math"
+2. homework --> topic
+
+With the prototype-delegated the use of the this keyword is possible to maintain the dynamic context.
+
+```javascript
+//single homework object
+var homework = {
+    study() {
+        console.log(`Please study${this.topic}`)
+    }
+}
+
+// we declare two variable with two objects
+var jsHW = Object.create(homework)
+jsHW.topic = "JS"
+jsHW.study() //Pliease study JS
+
+var mathHW = Object.create(homework)
+mathHW.topic = "Math"
+mathHW.study() //Please study Math
+```
+In this case the two objects each of them are prototype link to the homework object. So, in this case
+when call the function study() they assign its own topic property.
+
+###### **** Prototypal classes ****
+
+> ## Chapter 4: The Bigger Picture
+
+The JS language has 3 fundamental pillars:
+
+###### **** Pillar 1: Scope and Closure ****
+
+Scope: buckets that contain variables at are accesible at one level higher/outer or lower/inner are inaccessible.
+We go deeper when see hoistin: when all variables declared anywhere in a scope are treted as if they are declared at the 
+beginning of the scope and also with var-declared variables are function scoped.
+
+Closure: A closure is when a function makes reference to variables from an outer scope, and that function is passed around as a value and executed in other scopes, it mantains access to its original scope variables.
+
+###### **** Pillar 2: Prototypes ****
+It allows you to create objects directly and explicitly.s
+
+###### **** Pillar 3: Types and Coercion ****
+
+The way JS manage types.
