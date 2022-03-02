@@ -1,30 +1,31 @@
+process.env.UV_THREADPOOL_SIZE = 1
 const cluster = require('cluster')
 const crypto = require('crypto')
+const express = require('express')
+const app = express()
+const { Worker } = require('worker_threads')
 
-// Is the file being executed in master mode?
-if (cluster.isMaster) {
-    // Cause index.js to be executed again but in child mode
-    cluster.fork() //make it fast, but overdrive it 
-   
-} else {
-    // I´m a child, I´m going to act like a server and do nothing else
-    const express = require('express')
-    const app = express()
-    function doWork(duration) {
-        const start = Date.now()
-        while (Date.now() - start < duration) { }
+
+app.get('/', (req, res) => {
+    const worker = new Worker(function () {
+        //stringify function declaration
+        this.onmessage = function () {
+            //what we invoke when the postMessage() executed
+            let counter = 0
+            while(counter < 1e9) {//10 + nine 0 
+                counter++
+            }
+            postMessage()
+        }
+    })
+    //onmessage
+    worker.onmessage = function (message) {
+        console.log(message.data)
+        res.send('' + message.data)
     }
+    //postmessage
+    worker.postMessage(counter)
+})
 
-    app.get('/', (req, res) => {
-        doWork(5000)
-        res.send('Hi there')
-    })
-
-    app.get('/fast', (req,res) => {
-        res.send('This was fast')
-    })
-
-    app.listen(3008)
-}
-
+app.listen(4003)
 
