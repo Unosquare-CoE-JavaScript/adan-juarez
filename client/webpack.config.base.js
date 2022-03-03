@@ -20,16 +20,10 @@ module.exports = {
         }
       },
       {
-        test: /\.css$/,
+        test: /\.(sass|less|css)$/,
         use: [
           'style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              importLoaders: 1,
-              modules: true
-            }
-          }
+          'css-loader'
         ],
         exclude: /node_modules/
       },

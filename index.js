@@ -1,31 +1,49 @@
-process.env.UV_THREADPOOL_SIZE = 1
-const cluster = require('cluster')
-const crypto = require('crypto')
-const express = require('express')
-const app = express()
-const { Worker } = require('worker_threads')
+const express = require('express');
+const mongoose = require('mongoose');
+const cookieSession = require('cookie-session');
+const passport = require('passport');
+const bodyParser = require('body-parser');
+const keys = require('./config/keys');
 
+require('./models/User');
+require('./models/Blog');
+require('./services/passport');
+require('./services/cache');
 
-app.get('/', (req, res) => {
-    const worker = new Worker(function () {
-        //stringify function declaration
-        this.onmessage = function () {
-            //what we invoke when the postMessage() executed
-            let counter = 0
-            while(counter < 1e9) {//10 + nine 0 
-                counter++
-            }
-            postMessage()
-        }
-    })
-    //onmessage
-    worker.onmessage = function (message) {
-        console.log(message.data)
-        res.send('' + message.data)
-    }
-    //postmessage
-    worker.postMessage(counter)
-})
+mongoose.Promise = global.Promise;
+mongoose.connect(keys.MONGOURI, { 
+    useMongoClient: true,
+    useNewUrlParser: true,
+    useFindAndModify: false,
+    useUnifiedTopology: true
+});
 
-app.listen(4003)
+const app = express();
 
+app.use(bodyParser.json());
+app.use(
+  cookieSession({
+    maxAge: 30 * 24 * 60 * 60 * 1000,
+    keys: [keys.COOKIE_KEY]
+  })
+);
+app.use(passport.initialize());
+app.use(passport.session());
+
+require('./routes/authRoutes')(app);
+require('./routes/blogRoutes')(app);
+require('./routes/uploadRoutes')(app);
+
+if (['production', 'ci'].includes(process.env.NODE_ENV)) {
+  app.use(express.static('client/build'));
+
+  const path = require('path');
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve('client', 'build', 'index.html'));
+  });
+}
+
+const PORT = process.env.PORT || 5002;
+app.listen(PORT, () => {
+  console.log(`Listening on port`, PORT);
+});
