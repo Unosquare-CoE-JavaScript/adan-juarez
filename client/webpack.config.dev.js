@@ -4,7 +4,7 @@ const baseConfig = require('./webpack.config.base')
 module.exports = merge(baseConfig, {
   mode: 'development',
   devServer: {
-    port: 4651,
+    port: 4659,
     open: true,
     historyApiFallback: true,
     hot: true

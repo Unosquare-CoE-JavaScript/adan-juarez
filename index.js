@@ -9,8 +9,10 @@ require('./models/User');
 require('./models/Blog');
 require('./services/passport');
 require('./services/cache');
+console.log(keys.MONGOURI)
 
 mongoose.Promise = global.Promise;
+
 mongoose.connect(keys.MONGOURI, { 
     useMongoClient: true,
     useNewUrlParser: true,
@@ -21,6 +23,7 @@ mongoose.connect(keys.MONGOURI, {
 const app = express();
 
 app.use(bodyParser.json());
+
 app.use(
   cookieSession({
     maxAge: 30 * 24 * 60 * 60 * 1000,

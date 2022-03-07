@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import AppBar from '@material-ui/core/AppBar'
+import Toolbar from '@material-ui/core/Toolbar'
+import Button from '@material-ui/core/Button'
 
 class Header extends Component {
   renderContent() {
@@ -9,26 +12,26 @@ class Header extends Component {
         return;
       case false:
         return (
-          <li>
+          <Button color="inherit">
             <a href={'/auth/google'}>Login With Google</a>
-          </li>
+          </Button>
         );
       default:
         return [
-          <li key="3" style={{ margin: '0 10px' }}>
+          <Button color="inherit" key="3" style={{ margin: '0 10px' }}>
             <Link to="/blogs">My Blogs</Link>
-          </li>,
-          <li key="2">
+          </Button>,
+          <Button key="2" color="inherit">
             <a href={'/auth/logout'}>Logout</a>
-          </li>
+          </Button>
         ];
     }
   }
 
   render() {
     return (
-      <nav className="indigo">
-        <div className="nav-wrapper">
+      <AppBar position="static" style={{ color: 'white !important' }}>
+        <Toolbar>
           <Link
             to={this.props.auth ? '/blogs' : '/'}
             className="left brand-logo"
@@ -37,8 +40,8 @@ class Header extends Component {
             Blogster
           </Link>
           <ul className="right">{this.renderContent()}</ul>
-        </div>
-      </nav>
+        </Toolbar>
+      </AppBar>
     );
   }
 }

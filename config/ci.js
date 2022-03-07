@@ -1,8 +1,9 @@
+require('dotenv').config()
+
 module.exports = {
-    googleClientID:
-      '964808011168-29vqsooppd769hk90kjbjm5gld0glssb.apps.googleusercontent.com',
-    googleClientSecret: 'KnH-rZC23z4fr2CN4ISK4srN',
-    mongoURI: 'mongodb://127.0.0.1:27017/blog_ci',
-    cookieKey: '123123123',
-    redisUrl: 'redis://127.0.0.1:6379'
+  googleClientID: process.env.GOOGLE_CLIENT_ID,
+  googleClientSecret: process.env.GOOGLE_CLIENT_SECRET,
+  mongoURI: process.env.MONGOURI,
+  cookieKey: process.env.COOKIE_KEY,
+  redisUrl: process.env.REDIS_URL,
   };

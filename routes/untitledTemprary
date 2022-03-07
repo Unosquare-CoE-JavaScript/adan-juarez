@@ -1,0 +1,25 @@
+
+// test directly to chromium
+() => {
+    fetch('/api/blogs', {
+        method: 'POST',
+        credentials: 'same-origin',
+        headers: {
+            'Comtent-Type': 'application/json'
+        },
+        body: json.stringify({ title: 'My Title', content: 'My Content' })
+
+    }).then(res => res.json())
+}
+
+() => {
+    return fetch('/api/blogs', {
+        method: 'GET',
+        credentials: 'same-origin',
+        headers: {
+            'Comtent-Type': 'application/json'
+        },
+        body: json.stringify({ title: 'My Title', content: 'My Content' })
+
+    }).then(res => res.json())
+}
