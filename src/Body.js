@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import styled from 'styled-components'
+import { Routes, Route } from 'react-router-dom'
 import { Router } from '@reach/router'
+
 import { HEADER_ALLOWANCE } from './utils/constants'
 import { Home } from './content'
 import {
