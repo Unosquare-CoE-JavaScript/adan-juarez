@@ -4,3 +4,6 @@ package-lock.json
 .vscode
 starting-project/node_modules
 typescript-with-compiler/node_modules
+node/node_modules
+node/package-lock.json
+dist
