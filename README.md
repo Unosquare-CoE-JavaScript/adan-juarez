@@ -1,6 +1,3 @@
-# adan-juarez
-
-
 > React testing
 
 ######  Create a server
