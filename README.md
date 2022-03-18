@@ -17,3 +17,4 @@ Steps:
 
 Navigate into [http://localhost:3030/scoops] 
 * Change scoops for toppings or orders instead
+
