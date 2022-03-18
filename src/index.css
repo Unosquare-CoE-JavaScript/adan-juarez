@@ -68,3 +68,8 @@ label {
   display: flex;
   justify-content: center;
 }
+
+main {
+  margin: auto;
+  width: 600px;
+}

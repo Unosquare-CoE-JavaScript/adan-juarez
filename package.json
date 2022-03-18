@@ -24,8 +24,13 @@
   },
   "homepage": "https://github.com/Unosquare-CoE-JavaScript/adan-juarez#readme",
   "dependencies": {
+    "@twilio-paste/core": "^11.1.2",
+    "@twilio-paste/icons": "^6.2.1",
     "axios": "^0.21.1",
     "bootstrap": "^4.5.3",
+    "format-number": "^3.0.0",
+    "immer": "^9.0.12",
+    "lodash": "^4.17.21",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.0",
     "react-dom": "^17.0.1",
@@ -33,6 +38,7 @@
     "react-scripts": "4.0.1",
     "redux": "^4.1.2",
     "redux-thunk": "^2.4.1",
+    "reselect": "^4.1.5",
     "web-vitals": "^0.2.4"
   },
   "devDependencies": {
