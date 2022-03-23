@@ -1,3 +1,4 @@
+import React from 'react'
 import { Box, Flex, Heading } from '@twilio-paste/core';
 
 export const SummaryLine = ({ title, children }) => {

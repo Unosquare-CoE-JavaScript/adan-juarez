@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/Unosquare-CoE-JavaScript/adan-juarez#readme",
   "dependencies": {
+    "@reduxjs/toolkit": "^1.8.0",
     "@twilio-paste/core": "^11.1.2",
     "@twilio-paste/icons": "^6.2.1",
     "axios": "^0.21.1",

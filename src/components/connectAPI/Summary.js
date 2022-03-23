@@ -1,3 +1,4 @@
+import React from 'react'
 import { Stack } from '@twilio-paste/stack';
 import SummaryLine from './SummaryLine';
 import { toCurrency } from '../../utilities/calculator';

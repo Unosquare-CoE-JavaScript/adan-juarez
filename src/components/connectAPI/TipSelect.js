@@ -1,3 +1,4 @@
+import React from 'react'
 import { Box, Label, Option, Select } from '@twilio-paste/core';
 
 export const TipSelect = ({ tipPercentage, updateTip = () => {} }) => {
