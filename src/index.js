@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { createGlobalStyle } from 'styled-components'
-//import { BrowserRouter as Router } from 'react-router-dom'
 
 import App from './App'
 
@@ -30,3 +29,4 @@ ReactDOM.render(
   </ >,
   document.getElementById('root')
 )
+
