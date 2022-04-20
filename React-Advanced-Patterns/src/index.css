@@ -1,0 +1,75 @@
+:root {
+  --primary-color: magenta
+}
+html,
+body,
+* {
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+button,
+input[type='submit'] {
+  background-color: var(--primary-color);
+  border: 5px solid lighten(var(--primary-color), 30%);
+  color: white;
+  margin: 0 0.5em;
+  padding: 1em;
+  outline: none;
+}
+
+input:hover {
+  background-color: darken(var(--primary-color), 5%);
+}
+
+input:active {
+  background-color: darken(var(--primary-color), 10%);
+}
+
+input {
+  padding: 1em;
+}
+
+input:not([type='submit']) {
+  display: block;
+    margin: 0.5em;
+}
+form {
+  padding: 0.5em;
+  margin: 1em 0;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+label {
+    text-align: center;
+    display: block;
+    margin-bottom: 0.5em;
+  }
+.Counter {
+  border: 5px solid lighten(var(--primary-color), 40%);
+  font-weight: 700;
+  margin: 2em auto;
+  padding: 1em;
+  width: 600px;
+}
+
+.count {
+  font-size: 8em;
+  text-align: center;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  margin: auto;
+  width: 600px;
+}
