@@ -1,20 +1,26 @@
-> React testing
+### Cesar Adan Unosquare JavaScript CoE
 
-######  Create a server
-Mock service Worker:
+> Asynchronous JS
+ [Asynchronous JS repo](https://github.com/Unosquare-CoE-JavaScript/adan-juarez/tree/main/Async-JS)
 
-npm install --save -D msw
-npm i --save -D express
+> You don´t know JS Yet
+ [You don´t know JS Yet repo](https://github.com/Unosquare-CoE-JavaScript/adan-juarez/tree/main/youDontKnowJSYet1)
 
-Steps: 
+> You don´t know JS Yet 2
+ [You don´t know JS Yet 2](https://github.com/Unosquare-CoE-JavaScript/adan-juarez/tree/main/youDontKnowJS2)
 
-1. Create handlers
+> React testing with React-testing-library and Jest
+ [React testing with React-testing-library and Jest repo](https://github.com/Unosquare-CoE-JavaScript/adan-juarez/tree/main/ReactTestingWithJestAndReactTestLibrary)
 
-2. Create test server
-   1. Check mock service worker: [mswjs.io/docs/getting-started/integrate/node]
+> Typescript
+ [Typescript repo](https://github.com/Unosquare-CoE-JavaScript/adan-juarez/tree/main/typescript)
 
-3. Be sure test server listens during all test
+> Advanced NodeJS
+ [Advanced NodeJS repo](https://github.com/Unosquare-CoE-JavaScript/adan-juarez/tree/main/Advanced-NodeJS)
 
-Navigate into [http://localhost:3030/scoops] 
-* Change scoops for toppings or orders instead
+> React Advanced Patterns
+ [React Advanced Patterns repo](https://github.com/Unosquare-CoE-JavaScript/adan-juarez/tree/main/react-patterns-advanced)
+
+> Redux Fundamentals
+ [Redux Fundamentals repo](https://github.com/Unosquare-CoE-JavaScript/adan-juarez/tree/main/redux)
 
