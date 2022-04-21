@@ -1,0 +1,100 @@
+{
+  "name": "adan-juarez",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.prod.js && cp _redirects dist",
+    "dev": "webpack-dev-server --watch --config webpack.config.dev.js",
+    "deploy": "surge ./dist adv-react-patterns-ultra.surge.sh",
+    "test": "jest --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Unosquare-CoE-JavaScript/adan-juarez.git"
+  },
+  "author": "Cesar Adan Juarez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Unosquare-CoE-JavaScript/adan-juarez/issues"
+  },
+  "homepage": "https://github.com/Unosquare-CoE-JavaScript/adan-juarez#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "@svgr/webpack": "^4.3.3",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
+    "file-loader": "^4.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev": "^1.1.1",
+    "webpack-dev-server": "^3.8.2",
+    "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@reach/router": "^1.3.4",
+    "mo-js": "^0.288.2",
+    "number-to-words": "^1.2.4",
+    "prop-types": "^15.7.2",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-hot-loader": "^4.12.15",
+    "react-responsive": "^8.0.1",
+    "react-router-dom": "^6.2.2",
+    "styled-components": "^4.4.0"
+  },
+  "jest": {
+    "verbose": true,
+    "unmockedModulePathPatterns": [
+      "/node_modules/react",
+      "/node_modules/react-dom",
+      "/node_modules/react-addons-test-utils",
+      "/node_modules/fbjs"
+    ],
+    "transform": {
+      "^.+\\.js$": "babel-jest",
+      "^.+\\.svg$": "jest-transformer-svg"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!lodash-es/.*)",
+      "/build"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,mjs}"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "jsx"
+    ],
+    "testEnvironment": "jsdom",
+    "moduleNameMapper": {
+      "\\.(css|less|scss|sass)$": "identity-obj-proxy",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "identity-onj-proxy"
+    }
+  },
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
