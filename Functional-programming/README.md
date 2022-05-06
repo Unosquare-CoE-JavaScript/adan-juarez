@@ -82,6 +82,10 @@ const doStuff = str =>
 
 ### Functer
 
+### Task monad
+
+Is equivaletn of a promise in functional programming.
+But a lazy promise.
 
 Examples available in:
 
