@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "immutable-ext": "^1.1.5",
+    "ramda": "^0.28.0",
+    "types": "^0.1.1"
+  },
+  "name": "functional-programming",
+  "description": "- Is programming with functions",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
