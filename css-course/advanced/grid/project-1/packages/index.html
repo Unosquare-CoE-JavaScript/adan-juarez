@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="favicon.png">
-    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <title>uHost</title>
+    <link rel="shortcut icon" href="../favicon.png">
     <link rel="stylesheet" href="../shared.css">
-    <link rel="stylesheet" href="start-hosting.css">
-    <title> Start-hosting</title>
+    <link rel="stylesheet" href="packages.css">
 </head>
+
 <body>
     <div class="backdrop"></div>
+    <div class="background"></div>
     <header class="main-header">
         <div>
             <button class="toggle-button">
@@ -27,7 +28,7 @@
         <nav class="main-nav">
             <ul class="main-nav__items">
                 <li class="main-nav__item">
-                    <a href="../packages/index.html">Packages</a>
+                    <a href="index.html">Packages</a>
                 </li>
                 <li class="main-nav__item">
                     <a href="../customers/index.html">Customers</a>
@@ -41,38 +42,41 @@
     <nav class="mobile-nav">
         <ul class="mobile-nav__items">
             <li class="mobile-nav__item">
-                <a href="../packages/index.html">Packages</a>
+                <a href="index.html">Packages</a>
             </li>
             <li class="mobile-nav__item">
                 <a href="../customers/index.html">Customers</a>
             </li>
             <li class="mobile-nav__item mobile-nav__item--cta">
-                <a href="index.html">Start Hosting</a>
+                <a href="../start-hosting/index.html">Start Hosting</a>
             </li>
         </ul>
     </nav>
-    <main class="signup-page">
-        <h1 class="signup-title">Awesome! Let's dive right in!</h1>
-        <form action="index.html" class="signup-form">
-            <label for="title">Title</label>
-            <select id="title">
-                <option value="mr">Mr.</option>
-                <option value="ms">Ms.</option>
-            </select>
-            <label for="first-name">First name</label>
-            <input type="text" id="first-name">
-            <label for="last-name">Last name</label>
-            <input type="text" id="last-name">
-            <label for="email">E-Mail</label>
-            <input type="email" id="email">
-            <label for="password">Password</label>
-            <input type="password" id="password">
-            <input type="checkbox" id="agree-terms">
-            <label for="agree-terms">Agree to
-                <a href="#">Terms &amp; Conditions</a>
-            </label>
-            <button type="submit" class="button">Sign Up</button>
-        </form>
+    <main>
+        <section class="package" id="plus">
+            <a href="#">
+                <h1 class="package__title">Our PLUS Plan</h1>
+                <h2 class="package__badge">RECOMMENDED</h2>
+                <h2 class="package__subtitle">The most popular choice of our customers.</h2>
+                <p class="package__info">Benefit from increased storage and faster support to ensure that your mission-critical data and applications
+                    are always available!</p>
+            </a>
+        </section>
+        <section class="package" id="free">
+            <a href="#">
+                <h1 class="package__title">Our FREE Plan</h1>
+                <h2 class="package__subtitle">An extremely solid start into our hosting world.</h2>
+                <p class="package__info">Get started immediately at zero cost!</p>
+            </a>
+        </section>
+        <div class="clearfix"></div>
+        <section class="package" id="premium">
+            <a href="#">
+                <h1 class="package__title">Our PREMIUM Plan</h1>
+                <h2 class="package__subtitle">All your enterprise needs. Instant support, guaranteed uptime. </h2>
+                <p class="package__info">The best solution for small to large enterprises. Because hosting shouldn't be in the way!</p>
+            </a>
+        </section>
     </main>
     <footer class="main-footer">
         <nav>
@@ -88,4 +92,5 @@
     </footer>
     <script src="../shared.js"></script>
 </body>
+
 </html>

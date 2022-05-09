@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="favicon.png">
-    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>uHost Signup</title>
+    <link rel="shortcut icon" href="../favicon.png">
     <link rel="stylesheet" href="../shared.css">
     <link rel="stylesheet" href="start-hosting.css">
-    <title> Start-hosting</title>
 </head>
+
 <body>
     <div class="backdrop"></div>
     <header class="main-header">
@@ -33,7 +33,7 @@
                     <a href="../customers/index.html">Customers</a>
                 </li>
                 <li class="main-nav__item main-nav__item--cta">
-                    <a href="../start-hosting/index.html">Start Hosting</a>
+                    <a href="index.html">Start Hosting</a>
                 </li>
             </ul>
         </nav>
@@ -60,17 +60,19 @@
                 <option value="ms">Ms.</option>
             </select>
             <label for="first-name">First name</label>
-            <input type="text" id="first-name">
+            <input type="text" id="first-name" required>
             <label for="last-name">Last name</label>
-            <input type="text" id="last-name">
+            <input type="text" id="last-name" required>
             <label for="email">E-Mail</label>
-            <input type="email" id="email">
+            <input type="email" id="email" required>
             <label for="password">Password</label>
-            <input type="password" id="password">
-            <input type="checkbox" id="agree-terms">
-            <label for="agree-terms">Agree to
-                <a href="#">Terms &amp; Conditions</a>
-            </label>
+            <input type="password" id="password" required>
+            <div class="signup-form__checkbox">
+                <input type="checkbox" id="agree-terms" required>
+                <label for="agree-terms">Agree to
+                    <a href="#">Terms &amp; Conditions</a>
+                </label>
+            </div>
             <button type="submit" class="button">Sign Up</button>
         </form>
     </main>
@@ -88,4 +90,5 @@
     </footer>
     <script src="../shared.js"></script>
 </body>
+
 </html>
