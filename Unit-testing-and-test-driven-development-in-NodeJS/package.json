@@ -1,0 +1,21 @@
+{
+  "name": "unit-testing-and-test-driven-development-in-nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "FizzBuzzKata.js",
+  "scripts": {
+      "test": "nyc mocha"    
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.6"
+  },
+  "devDependencies": {
+    "mocha": "^10.0.0",
+    "request": "^2.88.2",
+    "sinon": "^14.0.0",
+    "sinon-chai": "^3.7.0"
+  }
+}
