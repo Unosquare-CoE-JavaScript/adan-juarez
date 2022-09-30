@@ -4,7 +4,7 @@ import './pokemon-card.styles.scss'
 const PokemonCard = () => {
   return (
     <div>
-
+        
     </div>
   )
 }
