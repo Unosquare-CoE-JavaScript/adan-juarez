@@ -1,0 +1,25 @@
+.route_cont {
+    overflow-x: hidden;
+    margin-top: 0;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+@media screen and (min-width: 800px) {
+    .route_cont{
+        overflow-x: hidden;
+        margin: 0 20px;
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .route_cont{
+        overflow-x: hidden;
+        overflow-y: hidden;
+        margin-top: 0px;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}

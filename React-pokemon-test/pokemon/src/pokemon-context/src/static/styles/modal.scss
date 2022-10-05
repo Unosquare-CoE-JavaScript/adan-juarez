@@ -1,0 +1,63 @@
+.poke-card {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 13;
+        flex-direction: column;
+
+        &__sect {
+                display: flex;
+                flex-direction: column;
+        }
+        
+        &__con {
+                
+        }
+
+        &__content {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                border-radius: 9px;
+                border-bottom-left-radius: 0px;
+                border-bottom-right-radius: 0px;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                width: 80%;
+                height: 60%;
+                overflow-y: auto;
+                min-height: 200px;
+                background-color: white;
+                padding: 25px;
+                border-bottom: 1px solid rgba(153, 153, 153, 0.383);
+        }
+
+        &__btn--cont {
+                border-bottom-left-radius: 9px;
+                border-bottom-right-radius: 9px;
+                width: 80%;
+                height: 40px;
+                font-size: 12px;
+                font-weight: 800;
+                color: #1967D2; 
+        }
+
+        &__btn {
+                width: 100%;
+                height: 40px;
+                font-size: 12px;
+                font-weight: 800;
+                color: #1967D2; 
+        }
+}
