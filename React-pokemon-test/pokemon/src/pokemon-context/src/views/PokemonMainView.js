@@ -26,7 +26,6 @@ const PokemonMainView = () => {
         <div className="main-pokemon">
             <div className="main-pokemon__header">
                 <div style={{ display: 'flex', color: 'white', alignItems: 'center' }}>
-                   <LanguageSelector />
                 </div>
                 <Pagination
                     page={page + 1}

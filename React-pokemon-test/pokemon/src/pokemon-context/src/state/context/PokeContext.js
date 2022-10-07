@@ -37,7 +37,7 @@ const PokemonProvider = (props) => {
         try {
  
             setLoading(true);
-            const data = await getPokemon(5, 5 * page);
+            const data = await getPokemon(20, 20 * page);
             let dataPoke = data.results.map(async (pokemon) => {
                 let pokemonD = await getPokemonData(pokemon.url)
                 return pokemonD;

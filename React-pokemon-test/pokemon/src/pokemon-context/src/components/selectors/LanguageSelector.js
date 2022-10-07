@@ -4,7 +4,7 @@ import { languageOptions } from '../../translations/languages';
 import { PokeContext } from '../../state/context/PokeContext';
 
 export const LanguageSelector = () => {
-  const { userLanguage, userLanguageChange, descriptionLang} = useContext(PokeContext);
+  /* const { userLanguage, userLanguageChange, descriptionLang} = useContext(PokeContext);
 
   const handleLanguageChange = e => {
     userLanguageChange(e.target.value);
@@ -30,5 +30,5 @@ export const LanguageSelector = () => {
         <option key={id} value={id}>{name}</option>
       ))}
     </select>
-  );
+  ); */
 };
