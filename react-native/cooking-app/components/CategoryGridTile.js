@@ -2,7 +2,7 @@ import { View, Text, Pressable, StyleSheet, Platform } from 'react-native'
 import React from 'react'
 //import { useNavigation } from '@react-navigation/native'
 
-const CategoryGridTile = ({ title, color, onPress, navigation }) => {
+const CategoryGridTile = ({ title, color, onPress }) => {
     //const navigation = useNavigation();
 
   return (

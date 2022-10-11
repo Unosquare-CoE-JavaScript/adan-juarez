@@ -1,14 +1,15 @@
-import { View, Text, StyleSheet, FlatList } from 'react-native'
+import { View, StyleSheet, FlatList } from 'react-native'
 import React, { useEffect, useLayoutEffect } from 'react'
 import { useRoute } from '@react-navigation/native'
 
 import { MEALS, CATEGORIES } from '../data/dummy-data'
 import MealItem from '../components/MealItem'
+import CategoryGridTile from '../components/CategoryGridTile'
 
 const MealsOverviewScreen = ({ route, navigation }) => {
   //use it with nested components routes the useRoute()
   //const route = useRoute();
-  const catId = route.params.categoryId;
+ const catId = route.params.categoryId;
 
   const displayedMeals = MEALS.filter((mealItem) => {
     return mealItem.categoryIds.indexOf(catId) >= 0;
@@ -23,7 +24,6 @@ const MealsOverviewScreen = ({ route, navigation }) => {
       title: categoryTitle,
     });
   }, [catId, navigation]);
-
 
   function renderMealItem(itemData) {
     const item = itemData.item;
@@ -47,7 +47,8 @@ const MealsOverviewScreen = ({ route, navigation }) => {
         renderItem={renderMealItem}
       />
     </View>
-  )
+  ) 
+ 
 }
 
 export default MealsOverviewScreen
