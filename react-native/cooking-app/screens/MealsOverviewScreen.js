@@ -3,8 +3,7 @@ import React, { useEffect, useLayoutEffect } from 'react'
 import { useRoute } from '@react-navigation/native'
 
 import { MEALS, CATEGORIES } from '../data/dummy-data'
-import MealItem from '../components/MealItem'
-import CategoryGridTile from '../components/CategoryGridTile'
+import MealsList from '../components/MealsList/MealsList'
 
 const MealsOverviewScreen = ({ route, navigation }) => {
   //use it with nested components routes the useRoute()
@@ -25,29 +24,7 @@ const MealsOverviewScreen = ({ route, navigation }) => {
     });
   }, [catId, navigation]);
 
-  function renderMealItem(itemData) {
-    const item = itemData.item;
-    const mealItemProps = {
-      id: item.id,
-      title: item.title,
-      imageUrl: item.imageUrl,
-      duration: item.duration,
-      complexity: item.complexity,
-      affordability: item.affordability
-    }
-
-    return <MealItem {...mealItemProps} />
-  }
-
-  return (
-    <View style={styles.container}>
-      <FlatList
-        data={displayedMeals}
-        keyExtractor={(item) => item.id}
-        renderItem={renderMealItem}
-      />
-    </View>
-  ) 
+  return <MealsList items={displayedMeals} />
  
 }
 
