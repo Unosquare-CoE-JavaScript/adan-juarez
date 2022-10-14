@@ -75,6 +75,20 @@ export default function App() {
     });
   }
 
+  function sendPushNotificationHandler() {
+    fetch('', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        to: 'ExponentPushToken[]',
+        title: 'Test - sent from a device!',
+        body: 'This is a test!'
+      })
+    })
+  }
+
   return (
     <View style={styles.container}>
       <Button title="Schedule Notifications" onPress={scheduleNotificationHandler} />
