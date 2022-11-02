@@ -1,0 +1,165 @@
+$--header-color: #ffff;
+$--header-color-text: #919191;
+
+.header {
+    background-color: #F51953 !important;
+    padding: 10px 0;
+    display: flex;
+    width: 100vw;
+    height: 56px;
+    justify-content: center;
+    border-bottom: 1px solid gray;
+    background-color: $--header-color;
+    color: $--header-color-text;
+
+    &__container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__form {
+        display: none;
+    }
+
+    img {
+        width: 121px;
+        height: 52px;
+        overflow: hidden !important;
+      
+    }
+
+    &__catched--poke {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 799px) {
+    .header {
+
+        background-color: #F51953 !important;
+        padding: 10px 0;
+        display: flex;
+        width: 100vw;
+        height: 56px;
+        justify-content: center;
+        border-bottom: 1px solid gray;
+        background-color: $--header-color;
+        color: $--header-color-text;
+    
+        &__container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__form {
+            border: 1px solid gray;
+            display: flex;
+            align-items: center;
+            padding: 0px 0px 0px 13px;
+            width: 22%;
+            height: 26px;
+            border-radius: 14px;
+            background: white;
+        }
+
+        &__input {
+            font-size: 13px;
+            font-weight: 400;
+            padding: 0 4px;
+            width: 100%;
+            text-overflow: ellipsis;
+        }
+
+        &__btn {
+            height: 100%;
+            width: 40px;
+            background: orange;
+            color: white;
+            margin-right: 0 !important;
+        }
+
+        &__catched--poke {
+            display: block;
+        }
+
+       
+    img {
+        width: 121px;
+        height: 52px;
+        overflow: hidden !important;
+      
+    }
+    }
+
+    .header:after {
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, .6);
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .header {
+
+        background-color: #F51953 !important;
+    padding: 10px 0;
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    border-bottom: 1px solid gray;
+    background-color: $--header-color;
+    color: $--header-color-text;
+
+    &__container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+        &__form {
+            border: 1px solid gray;
+            display: flex;
+            align-items: center;
+            padding: 0px 0px 0px 13px;
+            width: 22%;
+            height: 26px;
+            border-radius: 14px;
+            background: white;
+        }
+
+        &__input {
+            font-size: 13px;
+            font-weight: 400;
+            padding: 0 4px;
+            width: 100%;
+            text-overflow: ellipsis;
+        }
+
+        &__btn {
+            height: 100%;
+            width: 40px;
+            background: orange;
+            color: white;
+            margin-right: 0 !important;
+        }
+
+        
+    img {
+        width: 121px;
+        height: 52px;
+        overflow: hidden !important;
+      
+    }
+
+        &__catched--pokemon {
+            display: block;
+        }
+    }
+
+    .header:after {
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, .6);
+    }
+}

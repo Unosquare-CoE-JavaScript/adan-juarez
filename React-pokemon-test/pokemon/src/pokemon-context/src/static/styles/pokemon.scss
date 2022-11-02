@@ -1,0 +1,254 @@
+.pokemon-item {
+
+  height: auto;
+  margin-right: -100%;
+  width: 85.49%;
+  margin-left: 7.2525%;
+
+
+  &__fg {
+    background: #F2F2F2;
+    float: left;
+    display: block;
+    position: relative;
+    border-radius: 5px;
+    width: 100%;
+    padding-top: 100%;
+  }
+
+  &__img {
+    float: left;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+  }
+
+  &__poke--info {
+    clear: both;
+    top: -5px;
+  }
+  
+  &__number {
+    font-family: "Flexo-Bold",arial,sans-serif;
+    color: #919191;
+    font-size: 18px;
+    padding-top: 2px;
+    font-weight: 800 !important;
+  }
+
+  &__number--prefix {
+    font-family: "Flexo-Bold",arial,sans-serif;
+    color: #919191;
+    font-size: 20px;
+    padding-top: 2px;
+  }
+
+  &__name {
+    font-size: 115%;
+    font-family: "Flexo-Demi",arial,sans-serif;
+    color: white;
+    text-transform: Capitalize;
+    font-size: 145%;
+    margin-bottom: 5px;
+}
+
+  &__abilities {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__type {
+    font-family: "Flexo-Medium",arial,sans-serif;
+    border-radius: 10px;
+    line-height: 18px;
+    width: 45%;
+    height: 26px;
+    text-transform: Capitalize;
+    display: flex;
+    font-size: 11px;
+    text-align: center;
+    background: white;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+  }  
+  
+  &__card-bottom {
+    width: 100%;
+  }
+
+  &__btn-more {
+    background-color: #313131;
+    border: 1px solid none;
+    border-radius: 10px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 10px 12px;
+    margin: 10px 0;
+    width: 100%;
+    overflow: hidden !important;
+  }
+
+  &__catched-btn {
+    display: block;
+    position: absolute;
+    z-index: 0;
+    right: 15px;
+    -webkit-transform: translateY(-40px);
+    transform: translateY(-40px);
+    width: 33px;
+    height: 33px;
+  }
+
+  &__favorite {
+
+  }
+}
+
+.pokemon__details_container {
+  width: 100%;
+
+  &--measures {
+
+  }
+
+  &--title {
+    margin: 12px 0;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  &-H {
+    margin: 12px 0;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  &--Hnumber {
+    margin: 12px 0;
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  &-W {
+    margin: 12px 4px 12px 12px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  &-Wnum {
+    margin: 12px 0px 12px 0;;
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  &--ability {
+    margin: 12px 0;
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  &--sect {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &--move-type {
+    margin: 5px 10px;
+    font-size: 12px;
+    font-weight: 400;
+    border: 1px solid black;
+    padding: 5px 10px;
+    outline: none !important;
+    border-radius: 10px;
+    background-color: #ABCDFE;
+  }
+}
+
+@media screen and (min-width: 510px) and (max-width: 767px) {
+  .pokemon-item {
+
+    height: auto;
+    width: 48.4375%;
+    margin: 0 .78125% 50px;
+ 
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .pokemon-item {
+
+    display: block;
+    float: left;
+    position: relative;
+    margin: 0 .78125% 50px;
+    width: 31.4375%;
+  
+    &__fg {
+      
+    }
+  
+    &__img {
+      display: block;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+  
+    &__poke--info {
+      
+    }
+    
+    &__number {
+      font-family: "Flexo-Bold",arial,sans-serif;
+      color: #919191;
+      font-size: 18px;
+      padding-top: 2px;
+      font-weight: 800 !important;
+    }
+  
+    &__number--prefix {}
+  
+    &__name {
+      margin-right: 10px;
+      text-transform: capitalize;
+    }
+  
+    &__abilities {
+  
+    }
+  
+    &__type {}  
+    
+    &__card-bottom {
+      width: 100%;
+    }
+  
+    &__btn-more {
+      background-color: #313131;
+      border: 1px solid none;
+      border-radius: 10px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      padding: 10px 12px;
+      margin: 10px 0;
+    }
+  
+    &__heart-btn {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  
+    &__favorite {}
+  }
+}
+
+@media screen and (min-width: 1500px) {}

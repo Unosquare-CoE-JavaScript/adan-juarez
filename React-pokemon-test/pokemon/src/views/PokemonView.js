@@ -1,22 +1,16 @@
-import React from 'react';
-import PokemonCard from '../components/pokemon-card/PokemonCard';
-import { useLocation, Link } from 'react-router-dom';
-import { Container } from '../components/container/container.component';
-import { useDispatch, useSelector } from 'react-redux';
-import { GetPokemonList } from '../redux/pokemon/pokemon.action';
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import _ from "lodash";
+import { Redirect } from "react-router-dom";
 
-export const PokemonView = (props) => {
-    const location = useLocation()
-    return (
-        <Container>
-            <Link to={location}>
-            <div style={{cursor: "pointer", display: "flex", marginLeft: "auto"}}>
-                Back
-            </div>
-            </Link>
-            <div>
-                <PokemonCard />
-            </div>
-        </Container>
-    )
-}
+const Pokemon = (props) => {
+
+
+  return(
+    <div className={"poke"}>
+    
+    </div>
+  )
+};
+
+export default Pokemon

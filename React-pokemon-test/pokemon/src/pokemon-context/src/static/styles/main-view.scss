@@ -1,0 +1,127 @@
+.main-pokemon {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 70px;
+
+    &__header {
+        display: flex;
+        width: 100%;
+        align-items: center !important;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        flex-direction: flex-end;
+        margin: 9px -13px;
+
+        &__container {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap !important;
+            flex-wrap: wrap !important;
+            padding: 0 4px;
+            margin: 0 5%;
+            margin-bottom: 70px;
+          }
+
+          &__message {
+            display: flex !important;
+            justify-content: center !important;
+            width: 100% !important;
+            color: white !important;
+            height: 100vh !important;
+            z-index: 100;
+        }
+    }
+}
+
+@media screen and (min-width: 510px) {
+    .main-pokemon {
+        &__container {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap !important;
+            flex-wrap: wrap !important;
+            padding: 0 4px;
+            margin: 0 5%;
+            margin-bottom: 70px;
+          }
+
+          &__message {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            color: white;
+            height: 100vh;
+            z-index: 100;
+        }
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .main-pokemon {
+        &__container {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap !important;
+            flex-wrap: wrap !important;
+            padding: 0 4px;
+            margin: 0 5%;
+            margin-bottom: 70px;
+          }
+
+          &__message {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            color: white;
+            height: 100vh;
+            z-index: 100;
+        }
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .main-pokemon {
+        &__container {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap !important;
+            flex-wrap: wrap !important;
+            padding: 0 4px;
+            margin: 0 5%;
+            margin-bottom: 70px;
+          }
+
+          &__message {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            color: white;
+            height: 100vh;
+            z-index: 100;
+        }
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .main-pokemon {
+        &__container {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap !important;
+            flex-wrap: wrap !important;
+            padding: 0 4px;
+            margin: 0 5%;
+            margin-bottom: 70px;
+          }
+
+          &__message {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            color: white;
+            height: 100vh;
+            z-index: 100;
+        }
+    }
+}

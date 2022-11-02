@@ -1,23 +1,17 @@
-import React, { useEffect } from 'react'
-import { useDispatch } from 'react-redux'
-import { Routes, Route } from 'react-router-dom'
-import PokemonCard from '../components/pokemon-card/PokemonCard'
+import React, { Fragment, useEffect } from 'react'
+import { Switch, Route, Redirect, NavLink } from "react-router-dom";
 import MainPokemonView from '../views/MainPokemonView.component'
-import { PokemonView } from '../views/PokemonView'
-
+import PokemonView from '../views/PokemonView'
 
 const Navigation = () => {
-    const dispatch = useDispatch()
-
-    useEffect(() => {
-
-    }, [])
-
   return (
-    <Routes>
-        <Route path="/" element={<MainPokemonView />} />
-        <Route path="/pokemon/:pokemon" element={<PokemonView />} />
-    </Routes>
+    <div>
+    <Switch>
+      <Route path={"/"} exact component={MainPokemonView} />
+      <Route path={"/pokemon/:pokemon"} exact component={PokemonView} />
+      <Redirect to={"/"} />
+    </Switch>
+    </div>
   )
 }
 
