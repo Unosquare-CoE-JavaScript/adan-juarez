@@ -1,0 +1,14 @@
+.prev-color-style {
+    
+}
+
+.prev-color-on:active {
+    color:  #007bff;
+    pointer-events: pointer;
+}
+
+.prev-color-off:disabled {
+    color:  #6c757d;
+    pointer-events: none;
+    opacity: 0.6;
+}
